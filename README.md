@@ -19,11 +19,11 @@
 - has_many :users, through: :users_groups
 - has_many :comments
 
-## users＿groupsテーブル
+## user＿groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|chat_group_id|integer|null: false, foreign_key: true|
+|user|reference|null: false, foreign_key: true|
+|chat_group|reference|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :chat_group
