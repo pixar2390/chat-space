@@ -31,6 +31,7 @@
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|image|string||
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |chat_group_id|integer|null: false, foreign_key: true|
