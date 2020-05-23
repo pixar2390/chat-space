@@ -32,7 +32,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|string||
-|text|text|null: false|
+|text|text||
 |user_id|integer|null: false, foreign_key: true|
 |chat_group_id|integer|null: false, foreign_key: true|
 ### Association
