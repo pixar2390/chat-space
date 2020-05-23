@@ -6,8 +6,8 @@
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
-- has_many :users_groups
-- has_many :chat_groups, through: :users_groups
+- has_many :user_groups
+- has_many :chat_groups, through: :user_groups
 - has_many :comments
 
 ## chat_groupsテーブル
@@ -15,8 +15,8 @@
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many :users_groups
-- has_many :users, through: :users_groups
+- has_many :user_groups
+- has_many :users, through: :user_groups
 - has_many :comments
 
 ## user＿groupsテーブル
