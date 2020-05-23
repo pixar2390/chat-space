@@ -33,8 +33,8 @@
 |------|----|-------|
 |image|string||
 |text|text||
-|user_id|integer|null: false, foreign_key: true|
-|chat_group_id|integer|null: false, foreign_key: true|
+|user|referance|null: false, foreign_key: true|
+|chat_group|referance|null: false, foreign_key: true|
 ### Association
 - belongs_to :chat_group
 - belongs_to :user
