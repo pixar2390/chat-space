@@ -10,28 +10,46 @@
     height: 100vh;
     width: 300px;
     background-color: #253141;
-    .side-bar__header{
+    &__header{
       height: 100px;
       background-color: #253141;
       display: flex;
       align-items: center;
-      .side-bar__header__box{
+      &__box{
         height: 20px;
         width: 260px;
         background-color: #d8d8d8;
         margin: 0 20px;
         display: flex;
         justify-content: space-between;
-        .side-bar__header__box__user-name{
+        &__user-name{
           line-height:20px;
         }
-        .side-bar__header__box__flex{
+        &__flex{
           line-height:20px;
           width: 60px;
+          display: flex;
+          justify-content: flex-end;
+          .link{
+            text-decoration: none;
+            color: #ffffff;
+          }
+          .left-link{
+            margin-right: 5px;
+            .left-icon{
+              
+            }
+          }
+          .right-link{
+            
+            .right-icon{
+              
+            }
+          }
         }
       }
     }
-    .side-bar__chat-groups{
+    &__chat-groups{
       height: calc(100vh - 100px);
       background-color: #2f3e51;
     }
@@ -42,16 +60,16 @@
     height: 100vh;
     width: calc(100vw - 300px);
     background-color:#ffffff;
-    .main__header{
+    .header{
       height:100px;
       background-color: #ffffff;
       border-bottom:1px solid #eeeeee;
     }
-    .main__conversation{
+    .conversation{
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
     }
-    .main__footer{
+    .footer{
       height: 90px;
       background-color: #d2d2d2;
     }
