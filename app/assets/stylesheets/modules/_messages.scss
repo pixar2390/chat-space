@@ -10,6 +10,7 @@
     height: 100vh;
     width: 300px;
     background-color: #253141;
+    color: #ffffff;
     &__header{
       height: 100px;
       background-color: #253141;
@@ -24,7 +25,8 @@
         justify-content: space-between;
         &__user-name{
           line-height:20px;
-          color: #ffffff;
+          font-size: 16px;
+          font-weight: bold;
         }
         &__flex{
           line-height:20px;
@@ -38,13 +40,10 @@
           .left-link{
             margin-right: 5px;
             .left-icon{
-
             }
           }
           .right-link{
-            
             .right-icon{
-              
             }
           }
         }
@@ -53,8 +52,21 @@
     &__chat-groups{
       height: calc(100vh - 100px);
       background-color: #2f3e51;
-    }
-  
+      padding: 20px 20px 0;
+      .group-link{
+
+        &__box{
+          margin-bottom: 40px;
+          &__name{
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+          &__comment{
+            font-size: 11px;
+          }
+        }
+      }
+    } 
   }
   
   .main{
