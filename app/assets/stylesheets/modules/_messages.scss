@@ -13,7 +13,13 @@
     .side-bar__header{
       height: 100px;
       background-color: #253141;
+      display: flex;
+      align-items: center;
       .side-bar__header__username{
+        height: 20px;
+        width: 260px;
+        background-color: #d8d8d8;
+        margin: 0 20px;
         
       }
     }
