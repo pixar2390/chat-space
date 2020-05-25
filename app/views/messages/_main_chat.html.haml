@@ -1,8 +1,13 @@
 .main
   .header
-    .header__chat-title
-      チャットタイトル
-    .header__eddit-box
+    .header__group
+      %h2.header__group__name
+        グループ名
+      %ul.header__group__member
+        メンバーリスト
+    = link_to "#", class:"header__link" do
+      .header__link__button
+        Edit
   .conversation
     会話履歴
   .footer
