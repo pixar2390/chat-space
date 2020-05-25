@@ -2,17 +2,44 @@
   box-sizing: border-box;
 }
 
-.side-bar{
+.wrapper{
   height: 100vh;
-  width: 300px;
-  background-color: #253141;
-
-}
-
-
-.main{
-  height: 100vh;
-  width: calc(100vw-300px);
-  background-color:#ffffff;
+  width: 100vw;
+  display: flex;
+  .side-bar{
+    height: 100vh;
+    width: 300px;
+    background-color: #253141;
+    .side-bar__header{
+      height: 100px;
+      background-color: #253141;
+      .side-bar__header__username{
+        
+      }
+    }
+    .side-bar__chat-groups{
+      height: calc(100vh - 100px);
+      background-color: #2f3e51;
+    }
   
+  }
+  
+  .main{
+    height: 100vh;
+    width: calc(100vw - 300px);
+    background-color:#ffffff;
+    .main__header{
+      height:100px;
+      background-color: #ffffff;
+      border-bottom:1px solid #eeeeee;
+    }
+    .main__conversation{
+      height: calc(100vh - 100px - 90px);
+      background-color: #fafafa;
+    }
+    .main__footer{
+      height: 90px;
+      background-color: #d2d2d2;
+    }
+  }
 }
