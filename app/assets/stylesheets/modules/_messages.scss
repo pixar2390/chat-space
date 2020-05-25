@@ -15,11 +15,22 @@
       background-color: #253141;
       display: flex;
       align-items: center;
-      .side-bar__header__username{
+      .side-bar__header__box{
         height: 20px;
         width: 260px;
         background-color: #d8d8d8;
         margin: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        .side-bar__header__box__user-name{
+          line-height:20px;
+
+        }
+        .side-bar__header__box__--icon{
+          line-height:20px;
+
+
+        }
         
       }
     }
