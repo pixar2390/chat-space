@@ -18,12 +18,13 @@
       &__box{
         height: 20px;
         width: 260px;
-        background-color: #d8d8d8;
+        background-color: #253141;
         margin: 0 20px;
         display: flex;
         justify-content: space-between;
         &__user-name{
           line-height:20px;
+          color: #ffffff;
         }
         &__flex{
           line-height:20px;
@@ -37,7 +38,7 @@
           .left-link{
             margin-right: 5px;
             .left-icon{
-              
+
             }
           }
           .right-link{
