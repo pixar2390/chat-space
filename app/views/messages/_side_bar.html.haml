@@ -3,8 +3,11 @@
     .side-bar__header__box
       .side-bar__header__box__user-name
         アカウント名
-      .side-bar__header__box__--icon
-        icon
+      .side-bar__header__box__flex
+        = link_to "#", class:"left-link" do
+          =icon('far','edit', class:"left-icon")
+        = link_to "#", class:"right-link" do
+          =icon('fas','cog', class:"right-icon")
   .side-bar__chat-groups
     %a.side-bar__chat-groups__list
       チャットグループのリスト
