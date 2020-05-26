@@ -1,9 +1,9 @@
 .main
   .header
     .group
-      %h2.group__name
+      %h2.group-name
         グループ名
-      %ul.group__member
+      %ul.member
         メンバーリスト
     = link_to "#", class:"link-Edit" do
       .link-Edit__button
@@ -11,17 +11,17 @@
   .conversation
     #id1.message
       .upper-info
-        %p.upper-info__talker
+        %p.talker
           pixar
-        %p.upper-info__date
+        %p.date
           2020/5/26(Tue) 11:44:40
       %p.content
         発言内容
     #id2.message
       .upper-info
-        %p.upper-info__talker
+        %p.talker
           pixar
-        %p.upper-info__date
+        %p.date
           2020/5/26(Tue) 12:44:40
       %p.content
         二つ目の発言
