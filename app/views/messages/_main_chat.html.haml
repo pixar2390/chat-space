@@ -25,7 +25,14 @@
           2020/5/26(Tue) 12:44:40
       %p.content
         二つ目の発言
-  .footer
-    .footer__form
-      メッセージ入力蘭
+  .input-form
+    %from.new-message
+      .input-box
+        %input.input-box__text{ type:"text", placeholder: "テキストを入力してください"}
+          %label.attachement{for:"attachment-file"}
+            = icon('far','image',class:"attachement__image")
+            %input.attachement__file{type:"file",id:"attachment-file"}
+      %input.send-btn{ type:"submit",value:"send"}
+
+
 
