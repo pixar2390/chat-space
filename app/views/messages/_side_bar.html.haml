@@ -1,17 +1,17 @@
 .side-bar
-  .side-bar__header
-    .side-bar__header__box
-      .side-bar__header__box__user-name
+  .side-header
+    .side-header__box
+      .user-name
         アカウント名
-      .side-bar__header__box__flex
-        = link_to "#", class:"link left-link" do
+      .flex
+        = link_to "#", class:"flex__link flex__left-link" do
           =icon('far','edit', class: "left-icon")
-        = link_to "#", class:"link right-link" do
+        = link_to "#", class:"flex__link flex__right-link" do
           =icon('fas','cog', class: "right-icon")
-  .side-bar__chat-groups
+  .chat-groups
     %a.group-link
       .group-link__box
-        %p.group-link__box__name
+        %p.group-link__box__g-list
           チャットグループのリスト
         %p.group-link__box__comment
           1コメント
