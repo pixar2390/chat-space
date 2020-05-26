@@ -1,15 +1,30 @@
 .main
   .header
-    .header__group
-      %h2.header__group__name
+    .group
+      %h2.group__name
         グループ名
-      %ul.header__group__member
+      %ul.group__member
         メンバーリスト
-    = link_to "#", class:"header__link" do
-      .header__link__button
+    = link_to "#", class:"link-Edit" do
+      .link-Edit__button
         Edit
   .conversation
-    会話履歴
+    #id1.message
+      .upper-info
+        %p.upper-info__talker
+          pixar
+        %p.upper-info__date
+          2020/5/26(Tue) 11:44:40
+      %p.content
+        発言内容
+    #id2.message
+      .upper-info
+        %p.upper-info__talker
+          pixar
+        %p.upper-info__date
+          2020/5/26(Tue) 12:44:40
+      %p.content
+        二つ目の発言
   .footer
     .footer__form
       メッセージ入力蘭
