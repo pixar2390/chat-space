@@ -130,9 +130,41 @@
         }
       }
     }
-    .footer{
+    .input-form{
       height: 90px;
       background-color: #d2d2d2;
+      padding: 20px 40px;
+      .new-message{
+        display: flex;
+        .input-box{
+          position: relative;
+          &__text{
+            height: 50px;
+            width: calc(100vw - 300px - 80px - 100px - 15px);
+            padding: 0 10px;
+          }
+          .attachement{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 1.5rem;
+            input{display: none;}
+            &__image{
+            }
+            &__file{
+            }
+          }
+        }
+        .send-btn{
+          height: 50px;
+          width: 100px;
+          background-color: #38aef0;
+          color: white;
+          margin-left: 15px;
+        }
+      }
     }
   }
 }
+
+
