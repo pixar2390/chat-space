@@ -11,7 +11,7 @@
     width: 300px;
     background-color: #253141;
     color: #ffffff;
-    &__header{
+    .side-header{
       height: 100px;
       background-color: #253141;
       display: flex;
@@ -23,41 +23,40 @@
         margin: 0 20px;
         display: flex;
         justify-content: space-between;
-        &__user-name{
+        .user-name{
           line-height:20px;
           font-size: 16px;
           font-weight: bold;
         }
-        &__flex{
+        .flex{
           line-height:20px;
           width: 60px;
           display: flex;
           justify-content: flex-end;
-          .link{
+          &__link{
             text-decoration: none;
             color: #ffffff;
           }
-          .left-link{
+          &__left-link{
             margin-right: 5px;
             .left-icon{
             }
           }
-          .right-link{
+          &__right-link{
             .right-icon{
             }
           }
         }
       }
     }
-    &__chat-groups{
+    .chat-groups{
       height: calc(100vh - 100px);
       background-color: #2f3e51;
       padding: 20px 20px 0;
       .group-link{
-
         &__box{
           margin-bottom: 40px;
-          &__name{
+          &__g-list{
             font-size: 15px;
             margin-bottom: 5px;
           }
