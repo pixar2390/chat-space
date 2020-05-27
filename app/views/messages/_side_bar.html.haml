@@ -1,0 +1,18 @@
+.side-bar
+  .side-header
+    .side-header__box
+      .user-name
+        アカウント名
+      .flex
+        = link_to "#", class:"flex__link flex__left-link" do
+          =icon('far','edit', class: "left-icon")
+        = link_to "#", class:"flex__link flex__right-link" do
+          =icon('fas','cog', class: "right-icon")
+  .chat-groups
+    %a.group-link
+      .group-link__box
+        %p.group-link__box__g-list
+          チャットグループのリスト
+        %p.group-link__box__comment
+          1コメント
+
