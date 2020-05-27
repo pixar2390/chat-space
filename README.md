@@ -4,29 +4,29 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|nickname|string|null: false|
+|name|string|null: false|
 ### Association
-- has_many :user_groups
-- has_many :chat_groups, through: :user_groups
+- has_many :groups
+- has_many :groups, through: :group_users
 - has_many :comments
 
-## chat_groupsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many :user_groups
-- has_many :users, through: :user_groups
+- has_many :group_users
+- has_many :users, through: :group_users
 - has_many :comments
 
-## user＿groupsテーブル
+## group_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user|reference|null: false, foreign_key: true|
-|chat_group|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :chat_group
+- belongs_to :group
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -34,7 +34,7 @@
 |image|string||
 |text|text||
 |user|referance|null: false, foreign_key: true|
-|chat_group|referance|null: false, foreign_key: true|
+|group|referance|null: false, foreign_key: true|
 ### Association
-- belongs_to :chat_group
+- belongs_to :group
 - belongs_to :user
