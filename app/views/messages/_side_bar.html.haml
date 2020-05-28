@@ -9,10 +9,21 @@
         = link_to edit_user_path(current_user), class:"flex__link flex__right-link" do
           =icon('fas','cog', class: "right-icon")
   .chat-groups
-    %a.group-link
-      .group-link__box
-        %p.group-link__box__g-list
-          チャットグループのリスト
-        %p.group-link__box__comment
-          1コメント
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
+
+
+
+
+    -# %a.group-link
+    -#   .group-link__box
+    -#     %p.group-link__box__g-list
+    -#       チャットグループのリスト
+    -#     %p.group-link__box__comment
+    -#       1コメント
 
