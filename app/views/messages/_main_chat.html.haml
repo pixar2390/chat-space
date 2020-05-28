@@ -26,13 +26,26 @@
       %p.content
         二つ目の発言
   .new-message
-    %from.input-form
-      .input-box
-        %input.input-box__text{ type:"text", placeholder: "テキストを入力してください"}
-        %label.attachement{for:"attachment-file"}
-          = icon('far','image',class:"attachement__image")
-          %input.attachement__file{type:"file",id:"attachment-file"}
-      %input.send-btn{ type:"submit",value:"send"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+
+
+
+
+
+    -# %from.input-form
+    -#   .input-box
+    -#     %input.input-box__text{ type:"text", placeholder: "テキストを入力してください"}
+    -#     %label.attachement{for:"attachment-file"}
+    -#       = icon('far','image',class:"attachement__image")
+    -#       %input.attachement__file{type:"file",id:"attachment-file"}
+    -#   %input.send-btn{ type:"submit",value:"send"}
 
 
 
