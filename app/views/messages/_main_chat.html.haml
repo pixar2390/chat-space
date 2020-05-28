@@ -9,30 +9,15 @@
       .link-Edit__button
         Edit
   .conversation
-    #id1.message
-      .upper-info
-        %p.talker
-          pixar
-        %p.date
-          2020/5/26(Tue) 11:44:40
-      %p.content
-        発言内容
-    #id2.message
-      .upper-info
-        %p.talker
-          pixar
-        %p.date
-          2020/5/26(Tue) 12:44:40
-      %p.content
-        二つ目の発言
-  .new-message
+    =render @messages
+  .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
 
 
 
