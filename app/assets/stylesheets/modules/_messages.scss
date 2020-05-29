@@ -136,36 +136,34 @@
       height: 90px;
       background-color: #d2d2d2;
       padding: 20px 40px;
-      .new_message
-      // display: flex;
-      .form__messege{
-        height: 50px;
-        width: calc(100vw - 300px - 80px - 100px - 15px);
-        padding: 0 10px;
-      }
-
-        &__submit{
+      .new_message{
+        display: flex;
+        .form__message{
+          height: 50px;
+          width: calc(100vw - 300px - 80px - 100px - 15px);
+          padding: 0 10px;
+        }
+        .form__mask{
+          position: relative;
+          &__image{
+            position: absolute;
+            right: 10px;
+            top: 8px;
+            font-size: 1.5rem;
+            input{display: none;}
+          }
+        }
+        .form__submit{
           height: 50px;
           width: 100px;
           background-color: #38aef0;
           color: white;
           margin-left: 15px;
+          border-color: #38aef0;
         }
+      }
     }
   }
 }
 
-.form__mask{
-  position: relative;
-  &__image{
-    position: absolute;
-    right: 10px;
-    top: 8px;
-    font-size: 1.5rem;
-    input{display: none;}
-    &__image{
-    }
-    &__file{
-    }
-  }
-}
+
