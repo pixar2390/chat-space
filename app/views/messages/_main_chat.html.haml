@@ -2,37 +2,35 @@
   .header
     .group
       %h2.group-name
-        グループ名
+        = @group.name
       %ul.member
         Member :
-    = link_to "#", class:"link-Edit" do
+    = link_to edit_group_path(@group.id), class:"link-Edit" do
       .link-Edit__button
         Edit
   .conversation
-    #id1.message
-      .upper-info
-        %p.talker
-          pixar
-        %p.date
-          2020/5/26(Tue) 11:44:40
-      %p.content
-        発言内容
-    #id2.message
-      .upper-info
-        %p.talker
-          pixar
-        %p.date
-          2020/5/26(Tue) 12:44:40
-      %p.content
-        二つ目の発言
-  .new-message
-    %from.input-form
-      .input-box
-        %input.input-box__text{ type:"text", placeholder: "テキストを入力してください"}
-        %label.attachement{for:"attachment-file"}
-          = icon('far','image',class:"attachement__image")
-          %input.attachement__file{type:"file",id:"attachment-file"}
-      %input.send-btn{ type:"submit",value:"send"}
+    =render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+
+
+
+
+
+    -# %from.input-form
+    -#   .input-box
+    -#     %input.input-box__text{ type:"text", placeholder: "テキストを入力してください"}
+    -#     %label.attachement{for:"attachment-file"}
+    -#       = icon('far','image',class:"attachement__image")
+    -#       %input.attachement__file{type:"file",id:"attachment-file"}
+    -#   %input.send-btn{ type:"submit",value:"send"}
 
 
 
