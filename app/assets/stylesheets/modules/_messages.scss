@@ -115,20 +115,24 @@
       overflow: scroll;
       .message{
         margin-bottom: 40px;
-        .upper-info{
+        .upper-message{
           margin-bottom: 12px;
-          .talker{
+          display: flex;
+          &__user-name{
             font-size: 16px;
             color: #333333;
           }
-          .date{
+          &__date{
             font-size: 12px;
             color: #999999;
+            margin-left: 15px;
           }
         }
-        .content{
-          font-size: 14px;
-          color: #434A54;
+        .lower-message{
+          &__content{
+            font-size: 14px;
+            color: #434A54;
+          }
         }
       }
     }
