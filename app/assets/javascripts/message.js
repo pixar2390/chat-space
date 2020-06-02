@@ -19,7 +19,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.coversation').append(html);
-      $('.textbox').val('');
+      $('form')[0].reset();
       $('.form__submit').prop('disabled', false);
       
       })
