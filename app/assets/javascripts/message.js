@@ -58,8 +58,7 @@ $(function(){
 
     .done(function(data){
       var html = buildHTML(data);
-      // console.log(html);
-      $('.coversation').append(html);
+      $('.conversation').append(html);
       $('form')[0].reset();
       $('.form__submit').prop('disabled', false);
     })
