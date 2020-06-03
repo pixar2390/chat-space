@@ -1,6 +1,6 @@
 $(function() {
 
-  function  addUser(user){
+  function addUser(user){
     var template = `
               <div class="chat-group-user clearfix">
                 <p class="chat-group-user__name">${user.name}</p>
@@ -10,15 +10,13 @@ $(function() {
     $("#user-search-result").append(template);
   }
 
-  function  addNoUser(){
+  function addNoUser(){
     var template = `
               <div class="chat-group-user clearfix">
                 <p class="chat-group-user__name">ユーザーが見つかりません</p>
               </div>`
     $("#user-search-result").append(template);
-}
-
-
+  }
 
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
@@ -51,6 +49,12 @@ $(function() {
       alert("通信エラーです。ユーザーが表示できません。");
     });
 
-
   });
+
+  $('#user-search-result').on('click', $['data-user-id'], function(){
+    console
+    //console.log()でイベント発火の有無を確認しましょう
+  
+  });
+
 });
