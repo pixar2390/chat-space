@@ -90,8 +90,8 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
-        $('.messages').append(insertHTML);
-        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        $('.conversation').append(insertHTML);
+        $('.conversation').animate({ scrollTop: $('.conversation')[0].scrollHeight});
       }
     })
     .fail(function() {
