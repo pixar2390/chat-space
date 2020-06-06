@@ -74,3 +74,4 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem "better_errors"
 gem "binding_of_caller"
+gem 'fog-aws'
