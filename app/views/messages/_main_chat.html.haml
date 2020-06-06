@@ -5,6 +5,8 @@
         = @group.name
       %ul.member
         Member :
+        - @group.users.each do |user|
+          = user[:name]
     = link_to edit_group_path(@group.id), class:"link-Edit" do
       .link-Edit__button
         Edit
@@ -18,19 +20,6 @@
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'form__submit'
-
-
-
-
-
-
-    -# %from.input-form
-    -#   .input-box
-    -#     %input.input-box__text{ type:"text", placeholder: "テキストを入力してください"}
-    -#     %label.attachement{for:"attachment-file"}
-    -#       = icon('far','image',class:"attachement__image")
-    -#       %input.attachement__file{type:"file",id:"attachment-file"}
-    -#   %input.send-btn{ type:"submit",value:"send"}
 
 
 
