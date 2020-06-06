@@ -56,17 +56,21 @@ $(function(){
       contentType: false
     })
 
+    .always(function(){
+      $('.form__submit').prop('disabled', false);
+    })
+
     .done(function(data){
       var html = buildHTML(data);
       $('.conversation').append(html);
       $('.conversation').animate({ scrollTop: $('.conversation')[0].scrollHeight});
       $('form')[0].reset();
-      $('.form__submit').prop('disabled', false);
     })
     
     .fail(function(){
-      alert('非同期通信に失敗しました');
+      alert('メッセージを入力してください');
     });
+
   });
 
   var reloadMessages = function() {
